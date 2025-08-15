@@ -1,0 +1,17 @@
+Que es el  C++?
+el c++ es un lenguaje de programación que nos va ayudar a poder realizar tareas y desarrollar el pensamiento critico de manera adecuada y eficiente 
+nos dara la base necesaria para poder dominar otros lenguajes mas complejos ya que este es complejo pero nos ayudar mucho.
+Que nos Aportara ?
+Podremos crear programas eficientes
+Trabajar en empresas en el ambito del sotware 
+tambien podremos desarrollar videojuegos en 3D y 2D eficientemente 
+Nos ayudara a poder participar en la progrmación competitiva
+en nuestro primer programa entendemos la libreria que se emplea
+#include<iostream>
+using namespace std;
+int main ()
+
+{
+    cout<<"hola mundo";
+    return 0;
+}
