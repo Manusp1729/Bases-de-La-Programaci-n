@@ -1,0 +1,43 @@
+#include <iostream>
+#include <string>
+using namespace std;
+
+class Fecha {
+private:
+    int dia, mes, anio;
+public:
+    Fecha(int, int, int);      
+    string abreviada();
+    Fecha incremento(int);
+};
+
+
+Fecha::Fecha(int d, int m, int a) {
+    dia = d;
+    mes = m;
+    anio = a;
+}
+
+string Fecha::abreviada() {
+    return to_string(dia) + "/" + to_string(mes) + "/" + to_string(anio);
+}
+
+Fecha Fecha::incremento(int n) {
+    int d = dia + n, m = mes, a = anio;
+    while (d > 30) {
+        d -= 30;
+        m++;
+        if (m > 12) { m = 1; a++; }
+    }
+    return Fecha(d, m, a);
+}
+
+int main() {
+    Fecha f1(16, 2, 2023);
+    cout << f1.abreviada() << endl;
+
+    Fecha f2 = f1.incremento(20);
+    cout << f2.abreviada() << endl;
+
+    return 0;
+}
