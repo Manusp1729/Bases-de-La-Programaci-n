@@ -1,0 +1,50 @@
+#include <iostream>
+#include <string>
+using namespace std;
+
+class registro
+{
+private:
+    string nombre;
+    string apellido;
+    int numero;
+    string correo;
+public:
+    registro(string, string , int, string ); 
+    void registrar(); 
+};
+
+
+registro::registro(string xnombre, string yapellido, int znumero, string vcorreo)
+{
+    nombre = xnombre;
+    apellido = yapellido;
+    numero = znumero;
+    correo = vcorreo;
+}
+
+
+void registro::registrar()
+{
+    cout << "Los datos registrados son los siguientes: " << endl;
+    cout << nombre << endl << apellido << endl << numero << endl << correo << endl << endl;
+}
+
+int main()
+{
+    
+    registro usuario1("Manuel", "Soto", 958436212, "manuel@gmail.com");
+    registro usuario2("Ana", "Lopez", 987564210, "ana@hotmail.com");
+    registro usuario3("Carlos", "Perez", 978562428, "carlos@yahoo.com");
+    registro usuario4("Luisa", "Martinez", 925364184, "luisa@gmail.com");
+    registro usuario5("Jorge", "Ramirez", 971546258, "jorge@hotmail.com");
+
+    
+    usuario1.registrar();
+    usuario2.registrar();
+    usuario3.registrar();
+    usuario4.registrar();
+    usuario5.registrar();
+
+    return 0;
+}
